@@ -4,18 +4,13 @@ import SvgLinkedinMark from "../svgCmp/SvgLinkedinMark";
 import SvgTwitterMark from "../svgCmp/SvgTwitterMark";
 
 const SideNav = (props) => {
-    const { navbarHeight, navbarWidth, namePage = "" } = props;
     return (
-        <div className={`flex w-${navbarWidth}  bg-transparent`}>
-            {namePage && (
-                <div
-                    className={`w-full align-center absolute text-5xl opacity-25 tracking-wider text-light-blue font-bold font-raleway transform -rotate-90 origin-top-left top-${namePage}`}
-                >
-                    {namePage}
-                </div>
-            )}
-            <nav
-                className={`flex flex-col justify-between z-10 flex max-h-10 h-${navbarHeight} w-full z-9999`}
+        <div className="">
+            {/* <div className="w-full align-center text-5xl opacity-25 tracking-wider text-light-blue font-bold font-raleway transform -rotate-90 origin-top-left"
+            >
+              About
+            </div> */}
+            <nav className="flex flex-col justify-between z-10 flex max-h-10 w-full"
             >
                 <a
                     href="https://github.com/karinfdez"
