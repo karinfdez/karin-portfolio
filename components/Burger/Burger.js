@@ -2,8 +2,8 @@ import { slide as Menu } from 'react-burger-menu'
 import SvgInitialsMarkLight from "../svgCmp/SvgInitialsMarkLight";
 import Link from 'next/link'
 
-const Burger = (props) => {
-    const { varProps = {} } = props;
+
+const Burger = ({varProps}) => {
     const {
         textContent: { menu = {} },
     } = varProps;

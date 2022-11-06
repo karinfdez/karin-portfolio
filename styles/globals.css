@@ -21,16 +21,28 @@ main {
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: absolute;
-  width: 3.5rem;
-  height: 2.2rem;
-  right: 0rem;
-  top: 1.2rem;
+  width: 4rem;
+  height: 40px;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 30px;
+  right: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .bm-burger-button {
+    width: 3rem;
+    height: 30px;
+    right: 5px;
+  }
 }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: #173342;
-  height: 11% !important;
+  height: 3px !important;
   border-radius: 30px;
 }
 

@@ -5,33 +5,27 @@ import SvgTwitterMark from "../svgCmp/SvgTwitterMark";
 
 const SideNav = (props) => {
     return (
-        <div className="">
-            {/* <div className="w-full align-center text-5xl opacity-25 tracking-wider text-light-blue font-bold font-raleway transform -rotate-90 origin-top-left"
+        <nav className="flex md:flex-col z-10 flex w-full h-full items-center justify-center items-center space-x-8 py-4 xl:py-0 md:space-x-0 md:space-y-4"
+        >
+            <a
+                href="https://github.com/karinfdez"
+                className="transition duration-700 ease hover:opacity-50"
             >
-              About
-            </div> */}
-            <nav className="flex flex-col justify-between z-10 flex max-h-10 w-full"
+                <SvgGithubMark width={40} height={40} />
+            </a>
+            <a
+                href="https://www.linkedin.com/in/karinfernandez"
+                className="transition duration-700 ease hover:opacity-50 mt-0 ml-0"
             >
-                <a
-                    href="https://github.com/karinfdez"
-                    className="githubIcon pb-4 transition duration-700 ease hover:animate-spin"
-                >
-                    <SvgGithubMark width={40} height={40} />
-                </a>
-                <a
-                    href="https://www.linkedin.com/in/karinfernandez"
-                    className="linkedinIcon pb-4 transition duration-700 ease hover:opacity-50"
-                >
-                    <SvgLinkedinMark width={40} height={40} />
-                </a>
-                <a
-                    href="https://twitter.com/karincodes"
-                    className="twitterIcon pb-4 transition duration-700 ease hover:opacity-50"
-                >
-                    <SvgTwitterMark width={40} height={40} />
-                </a>
-            </nav>
-        </div>
+                <SvgLinkedinMark width={40} height={40} />
+            </a>
+            <a
+                href="https://twitter.com/karincodes"
+                className="transition duration-700 ease hover:opacity-50"
+            >
+                <SvgTwitterMark width={40} height={40} />
+            </a>
+        </nav>
     );
 };
 

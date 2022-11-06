@@ -6,7 +6,7 @@ module.exports = {
   ],
   theme: {
     boxShadow: {
-      avatar: "5px 2px 15px 8px rgba(75, 119, 136, 0.2)"
+      avatar: "5px 2px 15px 8px rgba(0, 0, 0, 0.2)"
     },
     extend: {
       colors: {
@@ -14,6 +14,9 @@ module.exports = {
         "medium-blue": "#22424c",
         "light-blue": "#4b7788",
         "hover-blue": "#b3d5dd",
+      },
+      screens: {
+        "3xl": "1900px"
       },
     },
   },
