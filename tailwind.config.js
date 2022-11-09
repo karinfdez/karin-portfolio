@@ -5,9 +5,6 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    boxShadow: {
-      avatar: "5px 2px 15px 8px rgba(0, 0, 0, 0.2)"
-    },
     extend: {
       colors: {
         "dark-blue": "#173342",

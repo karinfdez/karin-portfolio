@@ -22,25 +22,19 @@ export const varProps = {
             {
                 id: "home",
                 href: "/",
-                content: "about",
-                className:
-                    "menu-item transition duration-700 ease hover:opacity-50 font-raleway tracking-widest",
-            },
-            {
-                id: "projects",
-                href: "/projects",
-                content: "projects",
-                className:
-                    "menu-item transition duration-700 ease hover:opacity-50 font-raleway tracking-widest",
+                content: "about"
             },
             {
                 id: "resume",
                 href: "https://gitconnected.com/karinfdez/resume",
                 content: "resume",
-                className:
-                    "menu-item transition duration-700 ease hover:opacity-50 font-raleway tracking-widest",
                 newTab: true,
             },
+            {
+                id: "projects",
+                href: "/projects",
+                content: "projects",
+            }
         ],
         noMatchPage: {
             message: "Page not found. Click on right icon to find desired page",

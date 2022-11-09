@@ -13,7 +13,6 @@ export default function Layout({ children }) {
                         About
                     </div>
                     <div className='w-[50px] h-[50px] md:w-[80px] md:h-[80px]'>
-
                         <SvgInitialsMark/>
                     </div>
                     <Burger varProps={varProps} />

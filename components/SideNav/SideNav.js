@@ -9,21 +9,21 @@ const SideNav = (props) => {
         >
             <a
                 href="https://github.com/karinfdez"
-                className="transition duration-700 ease hover:opacity-50"
+                className="hover:xl:scale-[1.15] xl:ease-in xl:duration-300 transform-gpu"
             >
                 <SvgGithubMark width={40} height={40} />
             </a>
             <a
                 href="https://www.linkedin.com/in/karinfernandez"
-                className="transition duration-700 ease hover:opacity-50 mt-0 ml-0"
+                className="hover:xl:scale-[1.15] xl:ease-in xl:duration-300 transform-gpu"
             >
                 <SvgLinkedinMark width={40} height={40} />
             </a>
             <a
                 href="https://twitter.com/karincodes"
-                className="transition duration-700 ease hover:opacity-50"
+                className="hover:xl:scale-[1.15] xl:ease-in xl:duration-300 transform-gpu"
             >
-                <SvgTwitterMark width={40} height={40} />
+                <SvgTwitterMark width={40} height={40}/>
             </a>
         </nav>
     );

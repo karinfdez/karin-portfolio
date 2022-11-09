@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
 html {
   @apply h-full;
 }
 body {
   @apply h-full;
+  font-family: "Raleway", sans-serif;
 }
 div#__next {
   @apply h-full;
@@ -16,6 +19,24 @@ main {
 }
 
 
+.avatar-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 20px 15px 0px rgba(0,0,0,0.3);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
 
 /* HAMBURGER  AND MENU STYLE */
 /* Position and sizing of burger button */
@@ -31,6 +52,7 @@ main {
   right: 0;
 }
 
+
 @media screen and (max-width: 500px) {
   .bm-burger-button {
     width: 3rem;
@@ -44,27 +66,36 @@ main {
   background: #173342;
   height: 3px !important;
   border-radius: 30px;
+  transition-timing-function: ease-out;
+  transition-duration: 700ms;
+}
+
+.bm-burger-bars-hover {
+  opacity:1 !important;
+  transform: scale(1.10) !important;
 }
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
   height: 4rem !important;
   width: 4rem !important;
-  right: 6rem !important;
-  top: 4rem !important;
+  right: 5.7rem !important;
+  top: 3.5rem !important;
 }
-
-.bm-cross-button > buttton {
-  right: 6rem !important;
-  top: 5rem !important;
+@media only screen and (max-width: 1024px) and (min-width: 768px)  {
+  .bm-cross-button {
+    top: 2rem !important;
+    right: 3rem !important;
+  }
 }
 
 /* Color/shape of close button cross */
 .bm-cross {
   background: #4b7788;
-  width: 2px !important;
+  width: 4px !important;
   height: 4rem !important;
   outline: none;
+  border-radius:30px !important;
 }
 
 /*
@@ -75,92 +106,43 @@ Note: Beware of modifying this element as it can break the animations - you shou
   position: fixed;
   top: 0;
   background: none;
+  background: #173342;
+
 }
 
-/* General sidebar styles */
+/* General sidebar styles
 .bm-menu {
-  background: #173342;
-  padding: 0px;
-  font-size: 1.15em;
-}
+  /* background: #173342; */
+  /* padding: 0px; */
+  /* font-size: 1.15em; */
+/* } */ 
 
 /* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
+/* .bm-morph-shape {
   fill: #373a47;
-}
+} */
 
 /* Wrapper for item list */
 .bm-item-list {
   color: #4b7788;
   padding: 0.8em;
   display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
+  align-items: center;
+  padding-top: 3.5rem;
   flex-direction: column;
 }
 
-/* Individual item */
-.bm-item {
-  display: inline-block;
-  text-align: center;
-  font-family: "Raleway", sans-serif;
-  font-weight: 900;
-  font-size: 40px;
-  padding-bottom: 10px;
-  transition: transform 1.3s !important;
-}
-
-/* Styling of overlay */
+/* Styling of overlay to avoid extra background*/
 .bm-overlay {
   background: none !important;
 }
 
-/* AVATAR IMAGE  */
-#img-portfolio {
-  /* Before */
-  /* box-shadow: 0px 0px 15px 10px rgba(75, 119, 136, 0.3);
-  transition: all 1s ease-in-out; */
-  /* ------------ */
-  box-shadow: 5px 2px 15px 8px rgba(75, 119, 136, 0.2);
-  transition: all 1s ease-in-out;
-}
-#img-portfolio:hover {
-  /* Before */
-  /* box-shadow: 20px 20px rgba(75, 119, 136, 0.5); */
-  /* -------------- */
-  transform: perspective(500px) rotateY(15deg) rotatex(3deg);
-}
 
-/* 404 page */
-.page-nomatch-container {
-  /* transform: translate(0, 0px); */
-  /* animation: move 10s infinite; */
-}
-/* @keyframes move {
-  0% {
-      transform: translate(0, -30px);
-  }
-  50% {
-      transform: translate(0, 30px);
-  }
-  100% {
-      transform: translate(0, 0px);
-  }
-} */
-
-/* TODO: Move to tailwind */
-.top-about {
-  top: 4rem;
-}
-
-.top-projects {
-  top: 8rem;
-}
-
-/* Project page */
-.container-overlay {
+/* Project page   TODO:Pending remove */
+/* .container-overlay {
   position: relative;
 }
+
 .overlay {
   position: absolute;
   top: 0;
@@ -170,15 +152,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
   opacity: 1;
   background: rgba(0, 0, 0, 0);
   transition: background 1s ease-in-out;
-}
+} */
 
-.container-overlay:hover .overlay {
-  display: block;
-  opacity: 0.8;
-  background: #b3d5dd;
-}
 
-.title-projects {
+/* .title-projects {
   position: absolute;
   width: 100%;
   left: 0;
@@ -248,9 +225,9 @@ ul.pagination-container li.disabled a:hover {
   cursor: default;
   background: #4b7788;
   opacity: 0.3;
-}
+} */
 
-.projects-container,
+/* .projects-container,
 .pagination-container,
 .about-container {
   animation: opacityCmpNoData 0.7s ease;
@@ -288,4 +265,4 @@ ul.pagination-container li.disabled a:hover {
   100% {
       transform: translatey(0px);
   }
-}
+} */
