@@ -5,7 +5,7 @@ import SvgTwitterMark from "../svgCmp/SvgTwitterMark";
 
 const SideNav = (props) => {
     return (
-        <nav className="flex md:flex-col z-10 flex w-full h-full items-center justify-center items-center space-x-8 py-4 xl:py-0 md:space-x-0 md:space-y-4"
+        <nav className="flex md:flex-col z-10 flex w-full h-full items-center justify-center items-center space-x-8 py-4 xl:py-0 md:space-x-0 md:space-y-4 z-[99999]"
         >
             <a
                 href="https://github.com/karinfdez"

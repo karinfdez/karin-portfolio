@@ -4,7 +4,7 @@ import Avatar from '../components/Avatar'
 export default function Home() {
 
   return (
-    <Layout>
+    <Layout verticalTitle="about">
         <div className="flex w-full xl:w-1/2 justify-center pt-14 pb-12 lg:py-0">
           <Avatar width={80} height={80} imgUrl="/images/karin-avatar.jpeg"/>
         </div>
