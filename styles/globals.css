@@ -158,7 +158,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   left: 0;
 }
 #style-2::before {
-  background-color: #FFB447;
+  background-color: #F9F871;
   height: 2px;
   bottom: 0;
   transform-origin: 100% 50%;
@@ -172,7 +172,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   transform-origin: 100% 50%;
   transform: translate3d(200%, 0, 0);
   transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
-  color: #FFB447;
+  color: #F9F871;
 }
 
 #style-2:hover::before {
@@ -192,7 +192,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
   transform: translate3d(-200%, 0, 0);
 }
 
-
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #F9F871;
+  opacity: 1;
+}
+span.swiper-pagination-bullet {
+  background: #F9F871;
+  opacity: 0.40;
+}
 
 /* ul.pagination-container li a {
   border-radius: 100%;

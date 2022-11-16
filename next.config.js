@@ -1,16 +1,16 @@
 /** @type {import('next').NextConfig} */
-module.exports  = {
+const nextConfig = {
   reactStrictMode: true,
   images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'images.unsplash.com',
+        hostname: 'media.graphassets.com',
         port: '',
-        // pathname: '/account123/**',
-      },
+        pathname: '/**'
+      }
     ],
   },
 }
 
-
+module.exports = nextConfig
