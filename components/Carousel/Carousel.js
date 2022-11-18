@@ -15,8 +15,7 @@ export default function Carousel({slidersPerView, carouselItems}) {
       <Swiper
         slidesPerView={slidersPerView}
         spaceBetween={30}
-        className="flex xl:h-[300px]"
-        // navigation
+        className="flex md:h-[200px] xl:h-[300px]"
         pagination={{
           clickable: true,
         }}
@@ -27,7 +26,7 @@ export default function Carousel({slidersPerView, carouselItems}) {
           768: {
             slidesPerView: 2
           },
-          1000: {
+          1025: {
             slidesPerView: 3
           }
         }}
