@@ -4,18 +4,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
-html {
+html,
+body,
+body > div:first-child,
+div#__next,
+div#__next > div {
   @apply h-full;
 }
+
 body {
-  @apply h-full;
   font-family: "Raleway", sans-serif;
-}
-div#__next {
-  @apply h-full;
-}
-main {
-  @apply h-full;
 }
 
 
@@ -78,10 +76,14 @@ main {
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
   height: 4rem !important;
-  width: 4rem !important;
+  width: 5rem !important;
   right: 5.7rem !important;
-  top: 3.5rem !important;
+  top: 2rem !important;
 }
+button#react-burger-cross-btn {
+  left: 22px !important;
+}
+
 @media only screen and (max-width: 1024px) and (min-width: 768px)  {
   .bm-cross-button {
     top: 2rem !important;
@@ -97,6 +99,7 @@ main {
   outline: none;
   border-radius:30px !important;
 }
+
 
 /*
 Sidebar wrapper styles
@@ -129,7 +132,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: flex;
   align-items: center;
   padding-top: 3.5rem;
+  padding-bottom: 9.5rem;
   flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+  justify-content: center;
 }
 
 /* Styling of overlay to avoid extra background*/

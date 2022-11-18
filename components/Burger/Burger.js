@@ -19,7 +19,7 @@ const Burger = ({varProps}) => {
                     <SvgInitialsMarkLight/>
                 </div>
                 {menu.length > 0 &&
-                <div className='!flex flex-col w-full items-center pt-40 text-[50px] font-[700] 3xl:pt-60 3xl:space-y-1'>
+                <div className='!flex flex-col w-full justify-center items-center text-[50px] font-[700] lg:space-y-3 3xl:space-y-1 py-12'>
                     {menu.map((elm, index) => {
                         const {
                             id = "",
