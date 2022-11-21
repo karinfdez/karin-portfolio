@@ -1,10 +1,10 @@
 import Layout from '../components/layout';
 import Avatar from '../components/Avatar'
 
-export default function Home() {
+export default function Page() {
 
   return (
-    <Layout verticalTitle="about">
+    <>
         <div className="flex w-full xl:w-1/2 justify-center pt-14 pb-12 xl:py-0">
           <Avatar width={80} height={80} imgUrl="/images/karin-avatar.jpeg"/>
         </div>
@@ -19,6 +19,15 @@ export default function Home() {
             The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.
           </p>
         </div>
+    </>
+  )
+}
+
+
+Page.getLayout = function getLayout(page) {
+  return (
+    <Layout verticalTitle="about">
+      {page}
     </Layout>
   )
 }

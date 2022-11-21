@@ -17,7 +17,7 @@ export default function Layout({verticalTitle='', children }) {
                 <Burger varProps={varProps} />
             </div>
             <div className="flex w-full h-full md:h-[700px] 3xl:h-[800px] items-center">
-                <div className="flex flex-wrap-reverse w-full lg:grid lg:grid-cols-[10%_80%_10%] xl:grid-cols-[4%_92%_4%] items-center xl:py-[60px] 3xl:pt-[50px] min-h-[600px] md:max-h-[600px] my-auto">
+                <div className="flex flex-wrap-reverse w-full lg:grid lg:grid-cols-[10%_80%_10%] xl:grid-cols-[4%_92%_4%] items-center xl:py-[60px] 3xl:pt-[50px] min-h-[600px] my-auto">
                     <div className="flex border-t-2 border-light-blue mt-4 md:mt-0 lg:border-none w-full md:items-center">
                         <SideNav />
                     </div>
