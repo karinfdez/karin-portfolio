@@ -17,9 +17,9 @@ export default function Layout({verticalTitle='', children }) {
                 <div className="flex flex-wrap-reverse w-full lg:grid lg:grid-cols-[10%_80%_10%] xl:grid-cols-[4%_92%_4%] items-center xl:py-[60px] 3xl:pt-[50px] min-h-[600px] my-auto">
                     <div className="flex flex-col border-t-2 border-light-blue mt-4 md:mt-0 lg:border-none w-full md:items-center relative">
                         <SideNav />
-                        {verticalTitle && <div className="pl-[52rem] pb-[10px] h-full hidden xl:inline-block text-5xl opacity-25 tracking-wider text-light-blue font-bold font-raleway transform -rotate-[90deg]">
-                            {verticalTitle}
-                        </div>}
+                        {verticalTitle && <div className="absolute -top-[250px] 3xl:-top-[300px] hidden xl:inline-block text-5xl opacity-25 tracking-wider text-light-blue font-bold font-raleway transform -rotate-[90deg]">
+                        {verticalTitle}
+                </div>}
                     </div>
                     <main className="w-full h-auto xl:items-center flex flex-wrap md:landscape:max-w-[750px] xl:max-w-[1250px] 3xl:max-w-[1350px] my-auto mx-auto">
                         {children}
