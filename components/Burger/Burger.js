@@ -14,9 +14,11 @@ const Burger = ({varProps}) => {
 
     return (
         <>
-            <Menu right width="100%" disableAutoFocus>
-                <div className='w-[50px] h-[50px] md:w-[90px] md:h-[90px]'>
-                    <SvgInitialsMarkLight/>
+            <Menu className="relative" right width="100%" disableAutoFocus>
+                <div className='absolute top-10'>
+                    <div className='w-[50px] h-[50px] md:w-[90px] md:h-[90px]'>
+                        <SvgInitialsMarkLight/>
+                    </div>
                 </div>
                 {menu.length > 0 &&
                 <div className='!flex flex-col w-full justify-center items-center text-[50px] font-[700] lg:space-y-3 3xl:space-y-1 py-12'>
