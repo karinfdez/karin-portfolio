@@ -84,6 +84,12 @@ button#react-burger-cross-btn {
   }
 }
 
+@media only screen and (max-width: 280px) {
+  .avatar-circle {
+    width: 17rem;
+    height: 17rem;
+  }
+}
 /* Color/shape of close button cross */
 .bm-cross {
   background: #4b7788;
@@ -248,9 +254,12 @@ ul.pagination-container li.disabled a:hover {
       opacity: 1;
   }
 }
-
+*/
 .logo-404-page {
   animation: floating 4s infinite ease-in-out;
+}
+.no-page-found {
+  text-shadow: 2px 2px 4px #000000;
 }
 
 @keyframes floating {
@@ -263,4 +272,4 @@ ul.pagination-container li.disabled a:hover {
   100% {
       transform: translatey(0px);
   }
-} */
+} 
