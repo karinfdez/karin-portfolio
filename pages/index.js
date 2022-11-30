@@ -2,7 +2,6 @@ import Layout from '../components/layout';
 import Avatar from '../components/Avatar'
 import SvgInitialsMark from '../components/svgCmp/SvgInitialsMark';
 import Burger from '../components/Burger';
-import { varProps } from '../mainvar';
 import Carousel from '../components/Carousel';
 import client from "../apollo-client"
 import GET_PORTFOLIO_DATA from "../helpers/graphCms"
@@ -10,6 +9,7 @@ import SideNav from '../components/SideNav';
 import Link from 'next/link';
 
 export default function Page({projects, about, description}) {
+  console.log('projects', projects)
   return (
     <>
       <div className='flex flex-col w-full h-screen xl:max-w-[1800px] 3xl:max-w-[2600px] items-center relative'>
@@ -17,7 +17,7 @@ export default function Page({projects, about, description}) {
           <div className='flex justify-start-start w-[50px] h-[50px] md:w-[60px] md:h-[60px]'>
               <SvgInitialsMark/>
           </div>
-          <div class="flex w-full justify-end space-x-4">
+          <div className="flex w-full justify-end space-x-4">
             <Link href="/" className="hover-animation font-bold text-orange-pal">Resume</Link>
             <Link href="/#projects" className="hover-animation font-bold text-orange-pal">Projects</Link>
           </div>
@@ -38,8 +38,8 @@ export default function Page({projects, about, description}) {
           </div>
         </div>
         <div id="projects" className="w-full h-full xl:items-center flex flex-wrap w-full bg-dark-blue">
-          <div className='flex md:landscape:max-w-[750px] xl:max-w-[1250px] 3xl:max-w-[1350px] py-24 3xl:pt-24 3xl:pb-12 my-auto mx-auto'>
-            {projects.lenght > 0 && <Carousel slidersPerView={3} carouselItems={projects}/>}
+          <div className='flex md:landscape:max-w-[750px] xl:max-w-[1250px] 3xl:max-w-[1350px] pt-24 pb-12 mx-auto'>
+            <Carousel slidersPerView={3} carouselItems={projects}/>
           </div>
           <div className="flex flex-row items-center py-8 3xl:py-10 w-full justify-center">
             <SideNav />

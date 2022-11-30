@@ -14,10 +14,15 @@ const GET_PORTFOLIO_DATA = gql`
         html
       }
       projects {
+        id
         name
         githubUrl
+        url
         summary {
           text
+        }
+        image {
+          url
         }
       }
     }
