@@ -11,6 +11,8 @@ module.exports = {
         "medium-blue": "#22424c",
         "light-blue": "#4b7788",
         "hover-blue": "#b3d5dd",
+        "orange-pal": "#EC992A",
+        "light-yellow": "#F9F871"
       },
       screens: {
         "3xl": "1900px"

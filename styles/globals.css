@@ -4,11 +4,27 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
+html {
+  scroll-behavior: smooth !important;
+}
+
+html,
+body,
+#__next {
+  height: 100%;
+  margin:0;
+}
+
+
 body {
   font-family: "Raleway", sans-serif;
 }
 
-
+@layer components {
+  .hover-animation {
+    @apply hover:xl:scale-[1.12] xl:ease-in xl:duration-300 transform-gpu;
+  }
+}
 
 .avatar-animation {
   animation: float 6s ease-in-out infinite;
@@ -27,6 +43,13 @@ body {
 		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
 		transform: translatey(0px);
 	}
+}
+
+.header-main {
+  background-color: transparent;
+  box-shadow: inset 0 -1px 0 0 #22424c;
+  transition: box-shadow .2s ease 0s, background-color .2s ease 0s;
+  backdrop-filter: saturate(180%) blur(5px);
 }
 
 /* HAMBURGER  AND MENU STYLE */
@@ -92,7 +115,7 @@ button#react-burger-cross-btn {
 }
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #4b7788;
+  background: theme('colors.light-blue');
   width: 4px !important;
   height: 4rem !important;
   outline: none;
@@ -112,18 +135,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
   height: 100vh !important;
   max-height: 100vh;
 }
-
-/* General sidebar styles
-.bm-menu {
-  /* background: #173342; */
-  /* padding: 0px; */
-  /* font-size: 1.15em; */
-/* } */ 
-
-/* Morph shape necessary with bubble or elastic */
-/* .bm-morph-shape {
-  fill: #373a47;
-} */
 
 /* Wrapper for item list */
 .bm-item-list {
@@ -161,7 +172,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   left: 0;
 }
 #style-2::before {
-  background-color: #F9F871;
+  background-color: theme('colors.light-yellow');
   height: 2px;
   bottom: 0;
   transform-origin: 100% 50%;
@@ -175,7 +186,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   transform-origin: 100% 50%;
   transform: translate3d(200%, 0, 0);
   transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
-  color: #F9F871;
+  color: theme('colors.light-yellow');
 }
 
 #style-2:hover::before {
@@ -196,65 +207,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background: #F9F871;
+  background: theme('colors.light-yellow');
   opacity: 1;
 }
 span.swiper-pagination-bullet {
-  background: #F9F871;
+  background: theme('colors.light-yellow');
   opacity: 0.40;
 }
 
-/* ul.pagination-container li a {
-  border-radius: 100%;
-  background-color: #4b7788;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  transition: 800ms ease;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-  font-family: "Raleway", sans-serif;
-}
-
-ul.pagination-container li.selected a,
-ul.pagination-container li a:hover {
-  background: #22424c;
-  cursor: pointer;
-}
-
-ul.pagination-container li.disabled a,
-ul.pagination-container li.disabled a:hover {
-  cursor: default;
-  background: #4b7788;
-  opacity: 0.3;
-}  */
-
-/* .projects-container,
-.pagination-container,
-.about-container {
-  animation: opacityCmpNoData 0.7s ease;
-}
-
-@keyframes opacityCmpNoData {
-  0% {
-      opacity: 0;
-  }
-  25% {
-      opacity: 0.25;
-  }
-  50% {
-      opacity: 0.5;
-  }
-  75% {
-      opacity: 0.75;
-  }
-  100% {
-      opacity: 1;
-  }
-}
-*/
 .logo-404-page {
   animation: floating 4s infinite ease-in-out;
 }
