@@ -7,23 +7,14 @@ import client from "../apollo-client"
 import GET_PORTFOLIO_DATA from "../helpers/graphCms"
 import SideNav from '../components/SideNav';
 import Link from 'next/link';
+import Header from '../components/Header';
 
 export default function Page({projects, about, description}) {
-  console.log('projects', projects)
   return (
     <>
       <div className='flex flex-col w-full h-screen xl:max-w-[1800px] 3xl:max-w-[2600px] items-center relative'>
-        <div className='flex items-center w-full h-[80px] 3xl:h-[70px] fixed top-0 max-w-full shadow-lg header-main px-10 z-20'>
-          <div className='flex justify-start-start w-[50px] h-[50px] md:w-[60px] md:h-[60px]'>
-              <SvgInitialsMark/>
-          </div>
-          <div className="flex w-full justify-end space-x-4">
-            <Link href="/" className="hover-animation font-bold text-orange-pal">Resume</Link>
-            <Link href="/#projects" className="hover-animation font-bold text-orange-pal">Projects</Link>
-          </div>
-                {/* <Burger varProps={varProps} /> */}
-        </div>
-        <div className="flex flex-wrap-reverse w-full items-center pb-14 mt-32 3xl:pb-20 3xl:mt-36">
+        <Header />
+        <div className="flex flex-wrap-reverse w-full items-center pb-14 3xl:pb-20 mt-36">
           <div className="w-full h-auto xl:items-center flex flex-wrap md:landscape:max-w-[750px] xl:max-w-[1250px] 3xl:max-w-[1350px] my-auto mx-auto">
             <div className="flex w-full xl:w-1/2 justify-center pt-14 pb-12 xl:py-0">
               <Avatar width={80} height={80} imgUrl="/images/karin-avatar.jpeg"/>

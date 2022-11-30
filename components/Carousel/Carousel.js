@@ -9,12 +9,11 @@ import "swiper/css/grid";
 import "swiper/css/pagination";
 
 export default function Carousel({slidersPerView, carouselItems}) {
-  console.log('carouselItems', carouselItems)
   return (
       <Swiper
         slidesPerView={slidersPerView}
         spaceBetween={30}
-        className="flex md:h-[200px] xl:h-[300px]"
+        className="flex md:h-[200px] xl:h-[250px]"
         pagination={{
           clickable: true,
         }}
