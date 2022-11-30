@@ -3,21 +3,25 @@
 import { gql } from '@apollo/client';
 import { onError } from "@apollo/client/link/error";
 
-const GET_PROJECTS = gql`
-    query Projects {
-        projects {
-            id
-            name
-            githubUrl
-            summary {
-              text
-            }
-            image {
-              url
-            }
-            url
+const GET_PORTFOLIO_DATA = gql`
+  query PortfolioProfile {
+    portfolioProfile(where: {slug: "karin-fernandez-portfolio"}) {
+      id
+      aboutText {
+        html
+      }
+      description {
+        html
+      }
+      projects {
+        name
+        githubUrl
+        summary {
+          text
         }
+      }
     }
+}
 `;
 
 // Log any GraphQL errors or network error that occurred
@@ -32,4 +36,4 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
   });
 
 
-export default GET_PROJECTS
+export default GET_PORTFOLIO_DATA
