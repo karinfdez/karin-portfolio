@@ -5,10 +5,11 @@ import Burger from '../components/Burger';
 import { varProps } from '../mainvar';
 import Carousel from '../components/Carousel';
 import client from "../apollo-client"
-import GET_PROJECTS from "../helpers/graphCms"
+import GET_PORTFOLIO_DATA from "../helpers/graphCms"
 import SideNav from '../components/SideNav';
+import Link from 'next/link';
 
-export default function Page({projects}) {
+export default function Page({projects, about, description}) {
   return (
     <>
       <div className='flex flex-col w-full h-screen xl:max-w-[1800px] 3xl:max-w-[2600px] items-center relative'>
@@ -16,13 +17,13 @@ export default function Page({projects}) {
           <div className='flex justify-start-start w-[50px] h-[50px] md:w-[60px] md:h-[60px]'>
               <SvgInitialsMark/>
           </div>
-          <div class="flex w-full justify-end space-x-2">
-            <div className="font-bold text-orange-pal">Resume</div>
-            <div className="font-bold text-orange-pal">Projects</div>
+          <div class="flex w-full justify-end space-x-4">
+            <Link href="/" className="hover-animation font-bold text-orange-pal">Resume</Link>
+            <Link href="/#projects" className="hover-animation font-bold text-orange-pal">Projects</Link>
           </div>
                 {/* <Burger varProps={varProps} /> */}
         </div>
-        <div className="flex flex-wrap-reverse w-full items-center pb-12 mt-28 3xl:pb-18 3xl:mt-32 z-10">
+        <div className="flex flex-wrap-reverse w-full items-center pb-14 mt-32 3xl:pb-20 3xl:mt-36">
           <div className="w-full h-auto xl:items-center flex flex-wrap md:landscape:max-w-[750px] xl:max-w-[1250px] 3xl:max-w-[1350px] my-auto mx-auto">
             <div className="flex w-full xl:w-1/2 justify-center pt-14 pb-12 xl:py-0">
               <Avatar width={80} height={80} imgUrl="/images/karin-avatar.jpeg"/>
@@ -31,18 +32,14 @@ export default function Page({projects}) {
               <div className="flex w-full justify-center xl:justify-start">
                 <div className="w-[76px] h-[9px] bg-dark-blue mb-4 text-dark-blue"></div>
               </div>
-              <p className='font-bold mb-4 md:text-md xl:text-lg'>
-                Karin Fernandez, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. It usually begins with:
-              </p>
-              <p className='font-light md:text-md xl:text-lg'>
-                The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.
-              </p>
+              <div className="font-bold mb-4 md:text-md xl:text-lg text-medium-blue" dangerouslySetInnerHTML={{__html: about?.html}}/>
+              <div className="font-light md:text-md xl:text-lg text-medium-blue" dangerouslySetInnerHTML={{__html: description?.html}}/>
             </div>
           </div>
         </div>
-        <div className="w-full h-full xl:items-center flex flex-wrap w-full bg-dark-blue">
+        <div id="projects" className="w-full h-full xl:items-center flex flex-wrap w-full bg-dark-blue">
           <div className='flex md:landscape:max-w-[750px] xl:max-w-[1250px] 3xl:max-w-[1350px] py-24 3xl:pt-24 3xl:pb-12 my-auto mx-auto'>
-            <Carousel slidersPerView={3} carouselItems={projects}/>
+            {projects.lenght > 0 && <Carousel slidersPerView={3} carouselItems={projects}/>}
           </div>
           <div className="flex flex-row items-center py-8 3xl:py-10 w-full justify-center">
             <SideNav />
@@ -55,12 +52,14 @@ export default function Page({projects}) {
 
 
 export async function getServerSideProps() {
-  const projectsList = await client.query({
-     query: GET_PROJECTS,
-    })  
+  const portfolioData = await client.query({
+     query: GET_PORTFOLIO_DATA,
+  })  
   return {
     props: {
-      projects: projectsList?.data?.projects || {}
+      projects: portfolioData?.data?.portfolioProfile?.projects || {},
+      about: portfolioData?.data?.portfolioProfile?.aboutText || null,
+      description: portfolioData?.data?.portfolioProfile?.description || null
     }
   }
 }
