@@ -14,7 +14,7 @@ export default function Page({projects, about, description}) {
     <>
       <div className='flex flex-col w-full h-screen xl:max-w-[1800px] 3xl:max-w-[2600px] items-center relative'>
         <Header />
-        <div className="flex flex-wrap-reverse w-full items-center pb-14 3xl:pb-20 mt-36">
+        <div className="flex flex-wrap-reverse w-full items-center pb-14 3xl:pb-20 mt-24 md:mt-36">
           <div className="w-full h-auto xl:items-center flex flex-wrap md:landscape:max-w-[750px] xl:max-w-[1250px] 3xl:max-w-[1350px] my-auto mx-auto">
             <div className="flex w-full xl:w-1/2 justify-center pt-14 pb-12 xl:py-0">
               <Avatar width={80} height={80} imgUrl="/images/karin-avatar.jpeg"/>
