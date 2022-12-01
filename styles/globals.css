@@ -4,6 +4,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth !important;
 }
@@ -20,10 +24,22 @@ body {
 }
 
 .bg-image-container {
+  background-color:#000;
   background-position: center;
   background-color: white;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)),url(/images/landscape.jpeg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/images/landscape.jpeg);
   background-size: cover;
+  position:relative;
+}
+.bg-image-container::after {
+  backdrop-filter: blur(5px); 
+  -webkit-backdrop-filter: blur(5px);
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%; 
+  height: 100%;
+  top: 0;
 }
 
 @layer components {
