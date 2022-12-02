@@ -30,6 +30,7 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/images/landscape.jpeg);
   background-size: cover;
   position:relative;
+  background-size: 100% 100%
 }
 .bg-image-container::after {
   backdrop-filter: blur(5px); 
@@ -74,6 +75,12 @@ body {
   backdrop-filter: saturate(180%) blur(5px);
 }
 
+@media screen and (min-width: 768px) {
+  .swiper-wrapper {
+    height: 240px !important;
+  }
+}
+
 /* HAMBURGER  AND MENU STYLE */
 /* Position and sizing of burger button */
 .bm-burger-button {
@@ -94,6 +101,15 @@ body {
     width: 3rem;
     height: 30px;
     right: 5px;
+  }
+  .swiper-wrapper {
+    height: 220px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .swiper-wrapper {
+    height: 220px !important;
   }
 }
 

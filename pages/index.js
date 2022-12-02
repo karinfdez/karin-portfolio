@@ -7,13 +7,13 @@ import client from "../apollo-client"
 import GET_PORTFOLIO_DATA from "../helpers/graphCms"
 import SideNav from '../components/SideNav';
 import Link from 'next/link';
-import Header from '../components/Header';
+import Navbar from '../components/Navbar';
 
 export default function Page({projects, about, description}) {
   return (
     <>
       <div className='flex flex-col w-full h-screen xl:max-w-[1800px] 3xl:max-w-[2600px] items-center relative'>
-        <Header />
+        <Navbar />
         <div className="flex flex-wrap-reverse w-full items-center pb-14 3xl:pb-20 mt-24 md:mt-36">
           <div className="w-full h-auto xl:items-center flex flex-wrap md:landscape:max-w-[750px] xl:max-w-[1250px] 3xl:max-w-[1350px] my-auto mx-auto">
             <div className="flex w-full xl:w-1/2 justify-center pt-14 pb-12 xl:py-0">
@@ -29,10 +29,10 @@ export default function Page({projects, about, description}) {
           </div>
         </div>
         <div id="projects" className="w-full h-full xl:items-center flex flex-wrap w-full bg-dark-blue">
-          <div className='flex md:landscape:max-w-[750px] xl:max-w-[1250px] 3xl:max-w-[1350px] pt-24 pb-12 mx-auto'>
-            <Carousel slidersPerView={3} carouselItems={projects}/>
+          <div className='flex w-full md:landscape:max-w-[750px] xl:max-w-[1250px] 3xl:max-w-[1350px] pt-24 mx-auto px-10 md:portrait:px-20'>
+            <Carousel carouselItems={projects}/>
           </div>
-          <div className="flex flex-row items-center py-8 3xl:py-10 w-full justify-center">
+          <div className="flex flex-row items-center py-8 3xl:py-10 w-full justify-center bg-dark-blue">
             <SideNav />
           </div>
         </div>
