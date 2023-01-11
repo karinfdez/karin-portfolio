@@ -268,6 +268,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
   transform: translate3d(-200%, 0, 0);
 }
 
+.style-3::after {
+  color: theme('colors.dark-blue') !important;
+}
+
+.style-3::before {
+  background-color: theme('colors.dark-blue') !important;
+}
+
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: theme('colors.light-yellow');
   opacity: 1;

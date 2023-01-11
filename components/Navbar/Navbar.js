@@ -22,15 +22,31 @@ const Navbar = () => {
         <div className="flex justify-start-start w-[50px] h-[50px] md:w-[60px] md:h-[60px]">
           <SvgInitialsMark />
         </div>
-        <div className="menu-nav flex w-full justify-end space-x-4 navigation">
-          <Link href="/" className="hover-animation font-bold text-orange-pal">
+        <div className="menu-nav flex w-full justify-end space-x-8 navigation">
+          {/* <Link href="/" className="hover-animation font-bold text-orange-pal">
             Resume
-          </Link>
+          </Link> */}
           <Link
+            id="style-2"
+            data-replace="Resume"
+            className="text-orange-pal text-lg text-center style-3 font-bold"
+            href="/"
+          >
+            <span>Resume</span>
+          </Link>
+          {/* <Link
             href="/#projects"
             className="hover-animation font-bold text-orange-pal"
           >
             Projects
+          </Link> */}
+          <Link
+            id="style-2"
+            data-replace="Projects"
+            className="text-orange-pal text-lg text-center style-3 font-bold"
+            href="/#projects"
+          >
+            <span>Projects</span>
           </Link>
         </div>
       </div>
