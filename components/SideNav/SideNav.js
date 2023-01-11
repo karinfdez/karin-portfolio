@@ -2,29 +2,30 @@ import React from "react";
 import SvgGithubMark from "../svgCmp/SvgGithubMark";
 import SvgLinkedinMark from "../svgCmp/SvgLinkedinMark";
 import SvgTwitterMark from "../svgCmp/SvgTwitterMark";
+import Link from 'next/link';
 
 const SideNav = (props) => {
     return (
-        <nav className="flex xl:flex-col z-10 w-full h-full items-center justify-center space-x-8 py-4 xl:py-0 xl:space-x-0 xl:space-y-4 z-[99999]"
+        <nav className="flex w-full h-full items-center justify-center space-x-6"
         >
-            <a
+            <Link
                 href="https://github.com/karinfdez"
-                className="hover:xl:scale-[1.15] xl:ease-in xl:duration-300 transform-gpu"
+                className="hover-animation"
             >
                 <SvgGithubMark width={40} height={40} />
-            </a>
-            <a
+            </Link>
+            <Link
                 href="https://www.linkedin.com/in/karinfernandez"
-                className="hover:xl:scale-[1.15] xl:ease-in xl:duration-300 transform-gpu"
+                className="hover-animation"
             >
                 <SvgLinkedinMark width={40} height={40} />
-            </a>
-            <a
+            </Link>
+            <Link
                 href="https://twitter.com/karincodes"
-                className="hover:xl:scale-[1.15] xl:ease-in xl:duration-300 transform-gpu"
+                className="hover-animation"
             >
                 <SvgTwitterMark width={40} height={40}/>
-            </a>
+            </Link>
         </nav>
     );
 };

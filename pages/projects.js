@@ -7,7 +7,11 @@ import client from "../apollo-client"
 import Carousel from '../components/Carousel';
 
 export default function Projects({projects}) {
-  return  <Carousel slidersPerView={3} carouselItems={projects}/>
+  return (
+    <main className="w-full h-auto xl:items-center flex flex-wrap md:landscape:max-w-[750px] xl:max-w-[1250px] 3xl:max-w-[1350px] my-auto mx-auto">
+      <Carousel slidersPerView={3} carouselItems={projects}/>
+    </main>
+  )
 }
 
 export async function getServerSideProps() {
