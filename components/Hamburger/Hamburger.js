@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import Link from "next/link";
 
 const Hamburger = ({ isOpen }) => {
-  console.log("isOpen", isOpen);
   return (
     <nav>
       <div className="navbar">
@@ -24,14 +22,6 @@ const Hamburger = ({ isOpen }) => {
               } ease-in-out duration-500 transition-transform`}
             ></span>
           </div>
-          {/* <div className="flex menu-items min-w-full w-full">
-            <li className="w-full">
-              <Link href="/">Resume</Link>
-            </li>
-            <li className="w-full">
-              <Link href="/">Projects</Link>
-            </li>
-          </div> */}
         </div>
       </div>
     </nav>
