@@ -10,6 +10,23 @@ const Navbar = () => {
     setHamburgerOpen(!hamburgerOpen);
   };
 
+  const barList = [
+    {
+      name: "Resume",
+      href: "",
+      className:
+        "text-orange-pal text-[30px] lg:text-lg text-center style-3 font-bold",
+      dataReplace: "text-orange-pal text-lg text-center style-3 font-bold",
+    },
+    {
+      name: "Projects",
+      href: "/#projects",
+      className:
+        "text-orange-pal text-[30px] lg:text-lg text-center style-3 font-bold",
+      dataReplace: "Projects",
+    },
+  ];
+
   return (
     <>
       <div
@@ -23,38 +40,23 @@ const Navbar = () => {
           <SvgInitialsMark />
         </div>
         <div className="menu-nav flex w-full justify-end space-x-8 navigation">
-          {/* <Link href="/" className="hover-animation font-bold text-orange-pal">
-            Resume
-          </Link> */}
-          <Link
-            id="style-2"
-            data-replace="Resume"
-            className="text-orange-pal text-lg text-center style-3 font-bold"
-            href="/"
-          >
-            <span>Resume</span>
-          </Link>
-          {/* <Link
-            href="/#projects"
-            className="hover-animation font-bold text-orange-pal"
-          >
-            Projects
-          </Link> */}
-          <Link
-            id="style-2"
-            data-replace="Projects"
-            className="text-orange-pal text-lg text-center style-3 font-bold"
-            href="/#projects"
-          >
-            <span>Projects</span>
-          </Link>
+          {barList.map((item, index) => (
+            <Link
+              data-replace={item.dataReplace}
+              className={item.className}
+              href={item.href}
+              key={index}
+            >
+              <span>{item.name}</span>
+            </Link>
+          ))}
         </div>
       </div>
       <div
         className="w-full flex hamburger justify-end"
         onClick={toggleHamburger}
       >
-        <Hamburger isOpen={hamburgerOpen} />
+        <Hamburger isOpen={hamburgerOpen} barList={barList} />
       </div>
     </>
   );
