@@ -5,7 +5,6 @@ import { varProps } from "../../mainvar";
 
 export default function Layout({ verticalTitle = "", children }) {
   return (
-    // <div className='flex w-full justify-center px-0 lg:px-6 h-screen bg-red-500'>
     <div className="flex flex-col lg:px-4 3xl:px-8 w-full h-screen xl:max-w-[1800px] 3xl:max-w-[2600px] items-center relative pt-0 lg:pt-5 md:pt-0">
       <div className="flex justify-center items-center w-full relative">
         <div className="w-[50px] h-[50px] md:w-[80px] md:h-[80px]">

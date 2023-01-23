@@ -326,7 +326,7 @@ span.swiper-pagination-bullet {
   list-style: none;
 }
 
-.navbar .nav-container a {
+.navbar .nav-container .hamburger-lines span {
   text-decoration: none;
   color: #0e2431;
   font-weight: 500;
@@ -348,9 +348,7 @@ span.swiper-pagination-bullet {
 
 .nav-container .hamburger-lines {
   height: 26px;
-  width: 40px;
-  z-index: 2;
-  display: flex;
+  width: 35px; 
   flex-direction: column;
   justify-content: space-between;
 }

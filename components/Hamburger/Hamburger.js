@@ -3,14 +3,14 @@ import Link from "next/link";
 
 const Hamburger = ({ isOpen, barList = [1, 2, 3], onClick }) => {
   return (
-    <nav>
+    <nav className="w-full h-full relative">
       <div
-        className={`w-full bg-dark-blue opacity-[0.97] fixed right-0 top-0 h-screen p-5 md:p-12 z-50 ease-in-out duration-500 ${
+        className={`w-full bg-dark-blue opacity-[0.97] fixed right-0 top-0 h-screen p-5 md:p-12 z-40 ease-in-out duration-500 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="container nav-container flex items-center">
-          <div className="hamburger-lines">
+        <div className="container nav-container flex items-center absolute top-2 right-0">
+          <div className="flex hamburger-lines">
             <span
               className={`line line1 ${
                 isOpen ? "rotate-45" : "rotate-0"
