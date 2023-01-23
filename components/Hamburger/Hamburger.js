@@ -33,7 +33,7 @@ const Hamburger = ({ isOpen, barList = [1, 2, 3], onClick }) => {
             className={`flex w-full h-full flex-nowrap z-10 flex-col`}
             onClick={onClick}
           >
-            <div className="flex flex-col mt-16 w-full h-full items-center space-y-16">
+            <div className="flex flex-col py-40 w-full h-full items-center space-y-16">
               {barList.map((item, index) => (
                 <Link
                   data-replace={item.dataReplace}
