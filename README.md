@@ -1,5 +1,5 @@
-A portfolio project built on Next.js framework that connects with Hygraph, a headless CMS, to show dynamic content on the page. To connect to the API, Apollo Client was setup
-to manage remote data with GraphQL.
+### A portfolio project built on Next.js framework that connects with Hygraph, a headless CMS, to show dynamic content on the page. To connect to the API, ### Apollo Client was setup
+### to manage remote data with GraphQL.
 
 This project it's deployed to Vercel, a cloud platform for deploying applications and websites.
 
