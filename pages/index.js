@@ -1,11 +1,8 @@
 import Avatar from "../components/Avatar";
-import SvgInitialsMark from "../components/svgCmp/SvgInitialsMark";
-import Burger from "../components/Burger";
 import Carousel from "../components/Carousel";
 import client from "../apollo-client";
 import GET_PORTFOLIO_DATA from "../helpers/graphCms";
 import SideNav from "../components/SideNav";
-import Link from "next/link";
 import Navbar from "../components/Navbar";
 
 export default function Page({ projects, about, description }) {
