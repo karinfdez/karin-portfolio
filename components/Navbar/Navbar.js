@@ -16,7 +16,7 @@ const Navbar = () => {
       href: "",
       className:
         "text-orange-pal text-[30px] md:text-lg text-center style-3 font-bold",
-      dataReplace: "text-orange-pal text-lg text-center style-3 font-bold",
+      dataReplace: "Resume",
     },
     {
       name: "Projects",
@@ -35,6 +35,7 @@ const Navbar = () => {
       <div className="menu-nav flex w-full justify-end space-x-8 navigation">
         {barList.map((item, index) => (
           <Link
+            id="style-2"
             data-replace={item.dataReplace}
             className={item.className}
             href={item.href}
