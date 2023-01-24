@@ -29,15 +29,16 @@ npm run dev
 # or
 yarn dev
 ```
-## Dependencies used
+
+Third, open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+
 ## Dependencies used:
 
 - Tailwind CSS -- A CSS framework packed with styling classes.
 
 - Hygraph - GraphQL Headless CMS focused on Content Federation
 
-
-Third, open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Deploy on Vercel
 
