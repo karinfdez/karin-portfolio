@@ -39,12 +39,12 @@ export default function Page({ projects, about, description }) {
         </div>
         <div
           id="projects"
-          className="w-full h-full xl:items-center flex flex-wrap w-full bg-dark-blue"
+          className="w-full h-full xl:items-center justify-center flex flex-wrap w-full bg-dark-blue"
         >
-          <div className="flex w-full md:landscape:max-w-[750px] xl:max-w-[1250px] 3xl:max-w-[1350px] pt-24 mx-auto px-10 md:portrait:px-20">
+          <div className="flex w-full md:landscape:max-w-[750px] xl:max-w-[1250px] 3xl:max-w-[1350px] pt-20 md:pt-24 px-10 md:px-12">
             <Carousel carouselItems={projects} />
           </div>
-          <div className="flex flex-row items-center py-8 3xl:py-10 w-full justify-center bg-dark-blue">
+          <div className="flex flex-row items-center py-12 3xl:py-10 w-full justify-center bg-dark-blue">
             <SideNav />
           </div>
         </div>

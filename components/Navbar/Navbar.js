@@ -15,14 +15,14 @@ const Navbar = () => {
       name: "Resume",
       href: "",
       className:
-        "text-orange-pal text-[30px] lg:text-lg text-center style-3 font-bold",
+        "text-orange-pal text-[30px] md:text-lg text-center style-3 font-bold",
       dataReplace: "text-orange-pal text-lg text-center style-3 font-bold",
     },
     {
       name: "Projects",
       href: "/#projects",
       className:
-        "text-orange-pal text-[30px] lg:text-lg text-center style-3 font-bold",
+        "text-orange-pal text-[30px] md:text-lg text-center style-3 font-bold",
       dataReplace: "Projects",
     },
   ];

@@ -75,11 +75,11 @@ body {
   backdrop-filter: saturate(180%) blur(5px);
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-device-width: 768px) and (max-device-width: 819px) {
   .swiper-wrapper {
-    height: 240px !important;
+    height: 200px !important;
   }
-}
+} */
 
 /* HAMBURGER  AND MENU STYLE */
 @media (max-width: 767px) {
